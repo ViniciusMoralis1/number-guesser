@@ -4,20 +4,19 @@ using System.Drawing.Drawing2D;
 
 namespace NumberGuesser
 {
-    //public partial class Program : Form
-    public class Program
+    public partial class Program : Form
     {
 
-        //public Program()
-        //{
-        //InitializeComponent();
-        //}
+        public Program()
+        {
+        InitializeComponent();
+        }
 
         static void Main(string[] args)
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Program());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Program());
 
             Chamadas.GetAppName();
 
@@ -97,7 +96,7 @@ namespace NumberGuesser
             public static void GetAppName()
             {
                 string appName = "Number Guesser";
-                string appVersion = "1.0.0";
+                string appVersion = "1.1.0";
                 string appAuthor = "Vinicius Moralis";
 
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -111,6 +110,14 @@ namespace NumberGuesser
                 Console.WriteLine(message);
                 Console.ResetColor();
             }
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            this.ClientSize = new System.Drawing.Size(360, 250);
+            this.Name = "Program";
+            this.ResumeLayout(false);
         }
     }
 }
